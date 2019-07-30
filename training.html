@@ -24,8 +24,6 @@
    <a href="T&P.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Theatre &
    Performance</a>
    <a href="training.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-teal">Training</a> <a href="p&a.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Performance Art</a>
-   <a href="#choreography" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Choreography</a>
-   <a href="#research" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Research </a>
   </div>
  </div>
 
@@ -34,8 +32,6 @@
   <a href="T&P.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Theatre & Performance</a>
   <a href="training.html" class="w3-bar-item w3-button w3-padding-large w3-teal" onclick="myFunction()">Training</a>
   <a href="p&a.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Performance Art</a>
-  <a href="#choreography" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Choreography</a>
-  <a href="#research" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Research</a>
 </div>
 
       <!-- Page content -->
@@ -84,9 +80,7 @@
               }
 
 
-              </style>
-
-
+              </style>  
 
 
           <!-- slideshow of images -->
@@ -146,12 +140,13 @@
 
 
           <!-- footer -->
-          <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+          <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">              
               <a href="https://www.facebook.com/charlie.a.cornforth/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
               <a href="https://www.instagram.com/ccornforth1997/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
               <i class="fa fa-linkedin w3-hover-opacity"></i>
               <br>
               <a href="privacypolicy.html" class="w3-hover-opacity">Privacy Policy</a>
+
           </footer>
 
           <script>
@@ -171,15 +166,20 @@
                   setTimeout(carousel, 6500);
               }
 
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
-</body>
+              // Used to toggle the menu on small screens when clicking on the menu button
+              function myFunction() {
+               var x = document.getElementById("navDemo");
+               if (x.className.indexOf("w3-show") == -1) {
+                 x.className += " w3-show";
+               } else {
+                x.className = x.className.replace(" w3-show", "");
+               }
+              }
+
+              
+          </script>
+          <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+
+  </body>
 </html>

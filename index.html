@@ -24,10 +24,10 @@
    <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-teal">HOME</a>
    <a href="T&P.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Theatre &
    Performance</a>
-   <a href="training.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Training</a> <a href="p&a.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Performance Art</a>
-   <a href="#choreography" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Choreography</a>
-   <a href="#research" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Research </a>
-  </div>
+   <a href="training.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Training</a> 
+   <a href="p&a.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Performance Art</a>
+  <fb:login-button scope = "public_profile, email," onlogin="checkLoginState();" class="w3-bar-item w3-padding-large w3-hide-small"></fb:login-button>
+    </div>
  </div>
 
 <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
@@ -35,9 +35,8 @@
   <a href="T&P.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Theatre & Performance</a>
   <a href="training.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Training</a>
   <a href="p&a.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Performance Art</a>
-  <a href="#choreography" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Choreography</a>
-  <a href="#research" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Research</a>
-</div>
+  <fb:login-button scope = "public_profile, email," onlogin="checkLoginState();" class="w3-bar-item w3-button w3-padding-large"></fb:login-button>
+  </div>
 
       <!-- Page content -->
       <div class="w3-content" style="max-width: 2000px;margin-top: 46px">
@@ -87,44 +86,81 @@
 
               </style>
 
+              <script>
+                window.fbAsyncInit = function() {
+                FB.init({
+                  appId : '2400440340187706',
+                  cookie: true,
+                  xfbml : true, 
+                  version : 'v3.3'
+                }); 
+                FB.getLoginStatus(function(response) {
+                  statusChangeCallback(response);
+                }); 
+              };
+              (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0]; 
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id; 
+                js.src="//connect.facebook.net/en_US/sdk.js"; 
+                fjs.parentNode.insertBefore(js, fjs); 
+              }(document, 'script', 'facebook-jssdk')); 
+              
+              function statusChangeCallback(response){
+                if (response.status === 'connected') {
+                  console.log('logged in and authenticated'); 
+                } else {
+                  console.log('Not authenticated')
+                }
+              }
+
+              function checkLoginState() {
+                FB.getLoginStatus(function(response) {
+                  statusChangeCallback(response); 
+                }); 
+              }
+              </script>
+
           <!-- slideshow of images -->
-        <div class="mySlides w3-display-container w3-center">
+        <div class="mySlides w3-display-container w3-center w3-animate-left">
             <img src="CONTENT/Edited_Stills/B&W_Edits/AW1I6004_bw.jpg" style="width:100%" class="bg">
             <div class="TITLE w3-display-topmiddle w3-container w3-text-white w3-padding-64 w3-hide-medium w3-hide-small">
                 <h1>Charlie Cornforth</h1>
                 <p class="combat">Combat Choreographer & </p><h4 class="PA">Performance Artist</h4>
             </div>
         </div>
-        <div class="mySlides w3-display-container w3-center">
+        <div class="mySlides w3-display-container w3-center w3-animate-right">
              <img src="Website_Material/Website_Background_Photos/Aerial_bw.jpg" style="width:100%" class="bg">
             <div class="TITLE w3-display-bottommiddle w3-container w3-text-white w3-padding-64 w3-hide-medium w3-hide-small">
                 <h1>Aerial Performer</h1>
             </div>
         </div>
 
-        <div class="mySlides w3-display-container w3-center">
+        <div class="mySlides w3-display-container w3-center w3-animate-right">
             <img src="Website_Material/Website_Background_Photos/942766E5-8484-480F-8848-1A7375F5BD39.jpeg" style="width:100%" class="bg">
             <div class="TITLE w3-display-topmiddle w3-container w3-text-white w3-padding-64 w3-hide-medium w3-hide-small">
                 <h1>Practice as Research</h1>
             </div>
         </div>
 
-         <div class="mySlides w3-display-container w3-center">
+         <div class="mySlides w3-display-container w3-center w3-animate-right">
             <img src="Website_Material/Website_Background_Photos/Blood_From_A_Stone_bw.jpg" style="width:100%" class="bg">
             <div class="TITLE w3-display-bottommiddle w3-container w3-text-white w3-padding-64 w3-hide-medium w3-hide-small">
                 <h1>Blood from a Stone</h1>
             </div>
         </div>
-        <div class="mySlides w3-display-container w3-center">
+        <div class="mySlides w3-display-container w3-center w3-animate-right">
             <img src="Website_Material/Performance_Art/No_Tears_Just_Stone/Photos/IMG_20180517_130405_099.jpg" style="width:100%" class="bg">
             <div class="TITLE w3-display-topright w3-container w3-text-white w3-padding-64 w3-hide-medium w3-hide-small">
                 <h1 class="right">No Tears Just Stone</h1>
             </div>
         </div>
 
+
+
           <!-- page content -->
           <div class="w3-container w3-content w3-center w3-padding-64" style="max-width: 800px" id="about">
-            <h2 class="w3-wide">ME</h2>
+           <h2 class="w3-wide">ME</h2>
               <br>
               <br>
               <br>
@@ -163,7 +199,7 @@ function carousel() {
   myIndex++;
   if (myIndex > x.length) {myIndex = 1}
   x[myIndex-1].style.display = "block";
-  setTimeout(carousel, 6500);
+  setTimeout(carousel, 4500);
 }
 
 // Used to toggle the menu on small screens when clicking on the menu button
